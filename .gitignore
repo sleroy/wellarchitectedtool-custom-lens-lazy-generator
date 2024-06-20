@@ -1,0 +1,8 @@
+public/training
+node_modules/
+.git/
+.env
+lens*.md
+customLens.son
+buildlens.json
+lens.yml
