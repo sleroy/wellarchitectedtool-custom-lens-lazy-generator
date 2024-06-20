@@ -47,17 +47,23 @@ function updateFile(customLens: Structure) {
   // Generates a CSV
   
   let content = "Pillar,Question ID,Question title, Explanation, Response, Comment, Allowed Answers\n";
+  const lines = []
   for (let i = 0; i < customLens.pillars.length; i++) {
     const pillar = customLens.pillars[i];
     for (let j = 0; j < pillar.questions.length; j++) {
       const question = pillar.questions[j];
-      for (let k = 0; k < question.choices.length; k++) {
-        const choice = question.choices[k];
-
-      }
+      lines.push([
+        pillar.name,
+        question.id,
+        question.title,
+        question.description,
+        "",
+        "",
+        question.choices.map(choice => choice.title).join("\n")
+      ])
     }
   }
-  fs.writeFileSync("customLens.csv", content);
+  fs.writeFileSync("customLens.csv", content + csv_stringify(lines));
 }
 
 async function refineStructure(customLens: Structure) {
