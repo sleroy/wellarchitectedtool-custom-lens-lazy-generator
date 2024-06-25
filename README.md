@@ -33,8 +33,10 @@ Getting Started
 
 ##  Install dependencies:
 
+```bash
 cd customLens
 npm install
+```
 
 ##  Configure your environment:
 
@@ -42,10 +44,12 @@ Create a .env file in the root directory and set the necessary environment varia
 Refer to the README.md files within the public/training directory for specific instructions on configuring your data sources.
 Run the application:
 
+```bash
 npm start
-
+```
 ##  Project Structure
 
+```
 public/training: Contains training materials and examples for using Custom Lens.
 node_modules: Contains project dependencies.
 .git: Git repository files.
@@ -54,7 +58,9 @@ lens*.md: Documentation files for Custom Lens.
 customLens.son: Configuration file for Custom Lens.
 buildlens.json: Build configuration file for Custom Lens.
 lens.yml: Configuration file for Custom Lens.
-Contributing
+```
+
+## Contributing
 
 We welcome contributions to Custom Lens! If you have any suggestions, bug reports, or feature requests, please feel free to open an issue or submit a pull request.
 
